@@ -1,3 +1,5 @@
+import { Button } from "../../../components/Button/Button";
+import { PlayIcon } from "../../../Icons/PlayIcon";
 import classes from "./Home.module.scss";
 
 export const HomePage = () => {
@@ -12,6 +14,11 @@ export const HomePage = () => {
             string of looming threats.
           </p>
         </div>
+
+        <Button>
+          <PlayIcon size="l" /> Play
+        </Button>
+        <Button variant="transparent">More Info</Button>
       </div>
     </div>
   );
