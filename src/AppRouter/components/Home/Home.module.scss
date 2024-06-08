@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 90vh;
-
-  background: grey;
+  height: 50vw;
+  background-image: url("../../../assets/img/Hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .film_info {
-    width: 40%;
+    width: 400px;
     color: var(--main-inversion);
 
     .title {
@@ -19,5 +20,11 @@
       line-height: 2rem;
       margin-top: 1rem;
     }
+  }
+
+  .info_button_container {
+    display: flex;
+    align-items: center;
+    margin-top: 2.2rem;
   }
 }
