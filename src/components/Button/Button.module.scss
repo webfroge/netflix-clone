@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
   font-size: 1.6rem;
   font-weight: 600;
   background: none;
@@ -27,4 +28,16 @@
 .transparent {
   color: var(--main-inversion);
   background: rgba(var(--main-bg-rgb), 0.7);
+}
+
+.icon {
+  width: fit-content;
+  border: 2px solid var(--main-inversion);
+  border-radius: 50%;
+  padding: 0.8rem;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(var(--main-inversion-rgb), 0.2);
+  }
 }

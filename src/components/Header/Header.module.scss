@@ -1,0 +1,47 @@
+.container {
+  position: absolute;
+  top: 0;
+  padding: 20px 0;
+  width: 100%;
+
+  .content_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    color: var(--logo);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 4.5rem;
+  }
+
+  .navigation {
+    display: flex;
+
+    span {
+      color: var(--main-inversion);
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      opacity: 0.7;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    span + span {
+      margin-left: 2rem;
+    }
+  }
+}

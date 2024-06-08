@@ -1,18 +1,28 @@
 .container {
   display: flex;
-  align-items: center;
-  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
   height: 50vw;
-  background-image: url("../../../assets/img/Hero.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  max-height: 100vh;
 
-  .film_info {
-    width: 400px;
+  .film_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vw;
+    z-index: -1;
+    background-image: url("../../../assets/img/Hero.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .film_banner {
+    width: 500px;
     color: var(--main-inversion);
 
     .title {
-      font-size: 4rem;
+      font-size: 6rem;
     }
 
     .description {
@@ -22,9 +32,24 @@
     }
   }
 
-  .info_button_container {
+  .banner_buttons_container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 2.2rem;
+
+    .banner_button_size {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .right_rotate_icon {
+    color: var(--main-inversion);
+  }
+
+  .bookmark {
+    margin-left: 2rem;
+    margin-right: -2.5vw;
   }
 }

@@ -1,7 +1,7 @@
-import { ComponentPropsWithoutRef, ReactElement, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactElement } from "react";
 
 export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
-  variant?: "solid" | "transparent";
-  leftComponent?: ReactElement
-  rightComponent?: ReactElement
+  variant?: "solid" | "transparent" | "icon";
+  leftComponent?: ReactElement;
+  rightComponent?: ReactElement;
 }
