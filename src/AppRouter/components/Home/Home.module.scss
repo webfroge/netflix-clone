@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+
+  background: grey;
+
+  .film_info {
+    width: 40%;
+    color: var(--main-inversion);
+
+    .title {
+      font-size: 4rem;
+    }
+
+    .description {
+      font-size: 1.7em;
+      line-height: 2rem;
+      margin-top: 1rem;
+    }
+  }
+}
