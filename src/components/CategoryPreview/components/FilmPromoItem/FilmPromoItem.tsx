@@ -1,12 +1,19 @@
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import classes from "./FilmPromoItem.module.scss";
 import classNames from "classnames";
 import { debounce } from "lodash";
 
 export const CategoryPreviewFilmPromoItem = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const isMouseEnterRef = useRef(false);
 
-  const setIsHoveredDebounced = useMemo(() => debounce(setIsHovered, 1000), []);
+  const setIsHoveredDebounced = useMemo(
+    () =>
+      debounce(() => {
+        isMouseEnterRef.current && setIsHovered(true);
+      }, 500),
+    []
+  );
 
   const getPromoPreviewClassName = (className: string) => {
     return classNames(
@@ -20,7 +27,11 @@ export const CategoryPreviewFilmPromoItem = () => {
     <div style={{ position: "relative", marginRight: "1rem" }}>
       <div
         className={classes.film_promo_img}
-        onMouseEnter={() => setIsHoveredDebounced(true)}
+        onMouseEnter={() => {
+          isMouseEnterRef.current = true;
+          setIsHoveredDebounced();
+        }}
+        onMouseLeave={() => (isMouseEnterRef.current = false)}
       />
 
       <div className={getPromoPreviewClassName(classes.film_promo_preview)}>
@@ -29,7 +40,7 @@ export const CategoryPreviewFilmPromoItem = () => {
           className={getPromoPreviewClassName(
             classes.film_promo_preview_content
           )}
-        />
+        ></div>
       </div>
     </div>
   );
