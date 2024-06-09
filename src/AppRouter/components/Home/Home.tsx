@@ -1,5 +1,6 @@
 import { Bookmark } from "../../../components/Bookmark/Bookmark";
 import { Button } from "../../../components/Button/Button";
+import { CategoryPreview } from "../../../components/CategoryPreview/CategoryPreview";
 import { PageContainer } from "../../../components/Containers/PageContainer";
 import { CircleExclamationIcon } from "../../../Icons/CircleExplanationMark";
 import { PlayIcon } from "../../../Icons/PlayIcon";
@@ -9,9 +10,9 @@ import classes from "./Home.module.scss";
 export const HomePage = () => {
   return (
     <PageContainer>
-      <div className={classes.container}>
-        <div className={classes.film_img} />
+      <div className={classes.film_img} />
 
+      <div className={classes.container}>
         <div className={classes.film_banner}>
           <h1 className={classes.title}>House of Ninjas</h1>
           <p className={classes.description}>
@@ -40,6 +41,13 @@ export const HomePage = () => {
             <Bookmark className={classes.bookmark}>TV-14</Bookmark>
           </div>
         </div>
+      </div>
+
+      <div className={classes.category_preview_container}>
+        <CategoryPreview />
+        <CategoryPreview />
+        <CategoryPreview />
+        <CategoryPreview />
       </div>
     </PageContainer>
   );

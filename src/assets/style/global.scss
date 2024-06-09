@@ -1,7 +1,8 @@
 html {
-  color: var(--main-text);
+  color: var(--main-inversion);
   font-size: 10px;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .page_container {

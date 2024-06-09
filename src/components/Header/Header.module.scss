@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   padding: 20px 0;
+  z-index: 4;
   width: 100%;
 
   .content_container {
@@ -23,7 +24,6 @@
     display: flex;
 
     span {
-      color: var(--main-inversion);
       font-size: 1.4rem;
       font-weight: 600;
       cursor: pointer;
