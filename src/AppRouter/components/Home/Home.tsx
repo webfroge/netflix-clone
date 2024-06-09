@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Bookmark } from "../../../components/Bookmark/Bookmark";
 import { Button } from "../../../components/Button/Button";
 import { CategoryPreview } from "../../../components/CategoryPreview/CategoryPreview";
@@ -34,11 +35,13 @@ export const HomePage = () => {
           </div>
 
           <div className={classes.banner_button_size}>
-            <Button variant="icon">
+            <Button component="icon">
               <RightRotateIcon className={classes.right_rotate_icon} />
             </Button>
 
-            <Bookmark className={classes.bookmark}>TV-14</Bookmark>
+            <div className={classNames("bookmark", classes.bookmark)}>
+              TV-14
+            </div>
           </div>
         </div>
       </div>

@@ -10,10 +10,41 @@ html {
   margin: 0 auto;
 }
 
+.bookmark {
+  color: var(--main-inversion);
+  font-size: 1.6rem;
+  background-color: rgba(var(--main-bg-rgb), 0.6);
+  border-left: 4px solid var(--main-inversion);
+  padding: 0.7rem 5rem 0.7rem 1.4rem;
+}
+
+.age_limiter {
+  color: var(--main-grey);
+  font-size: 1.6rem;
+  border: 1px solid var(--main-grey);
+  padding: 0.2rem 1rem;
+}
+
+.video_quality {
+  color: var(--main-grey);
+  font-size: 1.4rem;
+  border: 1px solid var(--main-grey);
+  border-radius: 2px;
+  padding: 0.2rem 1rem;
+}
+
 .ml_10 {
   margin-left: 10px;
 }
 
 .mr_10 {
   margin-right: 10px;
+}
+
+.rotate_right {
+  transform: rotate(90deg);
+}
+
+.rotate_bottom {
+  transform: rotate(180deg);
 }

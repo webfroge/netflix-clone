@@ -31,13 +31,31 @@
 }
 
 .icon {
-  width: fit-content;
-  border: 2px solid var(--main-inversion);
+  aspect-ratio: 1 / 1;
+  background: transparent;
+  border: 2px solid;
+  border-color: var(--main-inversion);
   border-radius: 50%;
   padding: 0.8rem;
 
   &:hover {
     opacity: 1;
     background-color: rgba(var(--main-inversion-rgb), 0.2);
+  }
+
+  &.transparent {
+    background: rgba(var(--main-bg-rgb), 0.8) !important;
+    border-color: var(--main-grey);
+    transition: 0.3s;
+
+    &:hover {
+      border-color: var(--main-inversion);
+    }
+
+    svg {
+      path {
+        fill: var(--main-inversion) !important;
+      }
+    }
   }
 }

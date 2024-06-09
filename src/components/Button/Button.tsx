@@ -6,16 +6,21 @@ import { cloneElement } from "react";
 export const Button = ({
   className,
   variant = "solid",
+  component,
   children,
   leftComponent,
   rightComponent,
   ...restProps
 }: ButtonProps) => {
+  const buttonClassName = classNames(
+    classes.button,
+    classes[variant],
+    component && classes[component],
+    className
+  );
+
   return (
-    <button
-      className={classNames(classes.button, classes[variant], className)}
-      {...restProps}
-    >
+    <button className={buttonClassName} {...restProps}>
       {leftComponent &&
         cloneElement(leftComponent, {
           className: classNames(leftComponent.props.className, "mr_10"),
