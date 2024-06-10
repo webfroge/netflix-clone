@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  overflow: visible;
+
+  &:hover .tooltip_text {
+    visibility: visible;
+  }
+
+  .tooltip_text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: 0.3s;
+    color: var(--main-bg);
+    font-size: 1.8rem;
+    background-color: var(--main-inversion);
+    border-radius: 4px;
+    width: max-content;
+    visibility: hidden;
+    padding: 1rem 1.5rem;
+  }
+}

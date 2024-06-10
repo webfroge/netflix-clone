@@ -27,7 +27,7 @@ export const HomePage = () => {
           <div className={classes.banner_button_size}>
             <Button leftComponent={<PlayIcon />}>Play</Button>
             <Button
-              variant="transparent"
+              colorVariant="transparent"
               leftComponent={<CircleExclamationIcon />}
             >
               More Info
@@ -35,7 +35,7 @@ export const HomePage = () => {
           </div>
 
           <div className={classes.banner_button_size}>
-            <Button component="icon">
+            <Button componentVariant="icon">
               <RightRotateIcon className={classes.right_rotate_icon} />
             </Button>
 

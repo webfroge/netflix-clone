@@ -1,0 +1,21 @@
+$divider-size: 0.5rem;
+
+.container {
+  display: flex;
+  align-items: center;
+  color: var(--main-inversion);
+  font-size: 1.8rem;
+
+  .divider {
+    width: $divider-size;
+    height: $divider-size;
+    background: var(--main-grey);
+    border-radius: 50%;
+    margin: 0 1rem;
+  }
+
+  .genre_item_container {
+    display: flex;
+    align-items: center;
+  }
+}

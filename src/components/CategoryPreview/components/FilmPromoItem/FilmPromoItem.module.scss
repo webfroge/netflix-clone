@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  margin-left: 10rem;
 
   &:not(:first-child) {
     margin-left: 1rem;
@@ -72,6 +71,10 @@
             .play_icon {
               color: var(--main-inversion);
             }
+
+            .plus_icon {
+              margin: 0 1rem;
+            }
           }
         }
 
@@ -80,6 +83,7 @@
           align-items: center;
           color: var(--main-grey);
           font-size: 1.8rem;
+          margin-bottom: 2rem;
 
           .match_percent {
             color: var(--green);

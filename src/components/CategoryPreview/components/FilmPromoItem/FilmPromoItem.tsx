@@ -7,9 +7,10 @@ import { PlayIcon } from "../../../../Icons/PlayIcon";
 import { PlusIcon } from "../../../../Icons/PlusIcon";
 import { ThumbsUpIcon } from "../../../../Icons/ThumbsUpIcon";
 import { AngleUpIcon } from "../../../../Icons/AngleUpIcon";
+import { FilmGenres } from "../../../FilmGenres/FilmGenres";
 
 export const CategoryPreviewFilmPromoItem = () => {
-  const [isHovered, setIsHovered] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   const isMouseEnterRef = useRef(false);
 
   const setIsHoveredDebounced = useMemo(
@@ -41,7 +42,7 @@ export const CategoryPreviewFilmPromoItem = () => {
 
       <div className={getPromoPreviewClassName(classes.film_promo_preview)}>
         <div
-          //   onMouseLeave={() => setIsHovered(false)}
+          onMouseLeave={() => setIsHovered(false)}
           className={getPromoPreviewClassName(
             classes.film_promo_preview_content
           )}
@@ -51,18 +52,26 @@ export const CategoryPreviewFilmPromoItem = () => {
           <div className={classes.preview_content}>
             <div className={classes.preview_buttons_container}>
               <div className={classes.preview_buttons_left_side}>
-                <Button component="icon">
+                <Button componentVariant="icon">
                   <PlayIcon className={classes.play_icon} />
                 </Button>
-                <Button component="icon" variant="transparent">
+                <Button
+                  componentVariant="icon"
+                  colorVariant="transparent"
+                  overlayContainer={{ className: classes.plus_icon }}
+                  overlayVariant={{
+                    variant: "tooltip",
+                    text: "Add to My List",
+                  }}
+                >
                   <PlusIcon />
                 </Button>
-                <Button component="icon" variant="transparent">
+                <Button componentVariant="icon" colorVariant="transparent">
                   <ThumbsUpIcon />
                 </Button>
               </div>
 
-              <Button component="icon" variant="transparent">
+              <Button componentVariant="icon" colorVariant="transparent">
                 <AngleUpIcon className="rotate_bottom" />
               </Button>
             </div>
@@ -73,6 +82,8 @@ export const CategoryPreviewFilmPromoItem = () => {
               <span>1h 42m</span>
               <span className="video_quality">hd</span>
             </div>
+
+            <FilmGenres genres={["SlapStick", "Feel-Good", "Comedy"]} />
           </div>
         </div>
       </div>
