@@ -1,5 +1,5 @@
 import classes from "./PageContainer.module.scss";
-import { Header } from "../Header/Header";
+import { Header } from "./components/Header/Header";
 import { PageContainerProps } from "./PageContainer.interface";
 
 export const PageContainer = ({ children }: PageContainerProps) => {
