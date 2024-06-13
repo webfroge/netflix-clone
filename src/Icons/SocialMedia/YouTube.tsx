@@ -1,8 +1,8 @@
-import classes from "./Icon.module.scss";
-import { IconProps } from "./Icon.props";
+import classes from "../Icon.module.scss";
+import { IconProps } from "../Icon.props";
 import classNames from "classnames";
 
-export const FacebookIcon = ({
+export const YouTubeIcon = ({
   size = "m",
   className,
   ...restProps
