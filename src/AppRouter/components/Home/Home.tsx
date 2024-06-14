@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { Bookmark } from "../../../components/Bookmark/Bookmark";
 import { Button } from "../../../components/Button/Button";
 import { CategoryPreview } from "../../../components/CategoryPreview/CategoryPreview";
 import { PageContainer } from "../../../components/Containers/PageContainer";

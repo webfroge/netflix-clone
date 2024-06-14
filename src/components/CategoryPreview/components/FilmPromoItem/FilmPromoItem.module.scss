@@ -8,8 +8,10 @@
   .film_promo_img {
     position: relative;
     flex: 0 0 auto;
-    min-width: 21rem;
-    min-height: 12rem;
+    width: 16vw;
+    height: 9vw;
+    // min-width: 21rem;
+    // min-height: 12rem;
     background-image: url("../../../../assets/img/HorizontalHomePage.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,7 +38,8 @@
     .film_promo_preview_content {
       width: 100%;
       height: 100%;
-      background-color: var(--main-bg);
+      background-color: var(--second-bg);
+      box-shadow: var(--black) 0px 5px 15px;
       border-radius: 5px;
 
       &.open {
