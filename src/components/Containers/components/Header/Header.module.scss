@@ -4,8 +4,10 @@
   padding: 20px 0;
   z-index: 3;
   width: 100%;
+  transition: 0.3s;
 
   &.active {
+    transition: 0.3s;
     background: var(--second-bg);
   }
 

@@ -71,7 +71,14 @@ export const CategoryPreviewFilmPromoItem = () => {
                 </Button>
               </div>
 
-              <Button componentVariant="icon" colorVariant="transparent">
+              <Button
+                componentVariant="icon"
+                colorVariant="transparent"
+                overlayVariant={{
+                  variant: "tooltip",
+                  text: "Episode & info",
+                }}
+              >
                 <AngleUpIcon className="rotate_bottom" />
               </Button>
             </div>

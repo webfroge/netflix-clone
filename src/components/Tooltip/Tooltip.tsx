@@ -13,7 +13,13 @@ export const Tooltip = ({
       {...containerProps}
       className={classNames(className, classes.container)}
     >
-      <div className={classes.tooltip_text}>{title}</div>
+      <div className={classes.tooltip_text}>
+        {title}
+        <div className={classes.tooltip_triangle_container}>
+          <div className={classes.triangle} />
+        </div>
+      </div>
+
       {children}
     </div>
   );
