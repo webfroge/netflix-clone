@@ -6,11 +6,9 @@ import { TwitterIcon } from "../../../../Icons/SocialMedia/Twitter";
 import { YouTubeIcon } from "../../../../Icons/SocialMedia/YouTube";
 import { ServiceCodeButton } from "./components/ServiceCode/ServiceCode";
 
-export const Footer = (props: ComponentPropsWithoutRef<"div">) => {
-  console.log(props);
-
+export const Footer = (props: ComponentPropsWithoutRef<"footer">) => {
   return (
-    <footer className={classes.container}>
+    <footer className={classes.container} {...props}>
       <div className={classes.social_media_container}>
         <div className={classes.icon_container}>
           <FacebookIcon size="l" />

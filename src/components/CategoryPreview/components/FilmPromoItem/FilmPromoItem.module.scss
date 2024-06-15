@@ -10,8 +10,6 @@
     flex: 0 0 auto;
     width: 16vw;
     height: 9vw;
-    // min-width: 21rem;
-    // min-height: 12rem;
     background-image: url("../../../../assets/img/HorizontalHomePage.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +27,7 @@
     transform: translate(-50%, -50%);
 
     &.open {
-      z-index: 3;
+      z-index: 10;
     }
     &.close {
       z-index: 1;

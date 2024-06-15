@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
   height: 50vw;
   max-height: 100vh;
@@ -11,14 +11,18 @@
     width: 35vw;
 
     .title {
-      font-size: 6.8rem;
+      font-size: 7.8rem;
       font-weight: bold;
+      animation: animation_title 5s;
     }
 
     .description {
       font-size: 2.4em;
       margin-top: 1rem;
       font-weight: 400;
+      animation: animation_description 5s;
+      margin-bottom: -10%;
+      opacity: 0;
     }
   }
 
@@ -27,20 +31,21 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 2.2rem;
+    margin-bottom: 10vw;
 
     .banner_button_size {
       display: flex;
       align-items: center;
     }
-  }
 
-  .right_rotate_icon {
-    color: var(--main-inversion);
-  }
+    .right_rotate_icon {
+      color: var(--main-inversion);
+    }
 
-  .bookmark {
-    margin-left: 2rem;
-    margin-right: -2.5vw;
+    .bookmark {
+      margin-left: 2rem;
+      margin-right: -2.5vw;
+    }
   }
 }
 
@@ -59,5 +64,34 @@
 .category_preview_container {
   position: relative;
   z-index: 2;
-  margin-top: -20rem;
+  margin-top: -10rem;
+}
+
+@keyframes animation_title {
+  1% {
+    font-size: 6.8rem;
+  }
+  80% {
+    font-size: 6.8rem;
+  }
+  100% {
+    font-size: 7.8rem;
+  }
+}
+
+@keyframes animation_description {
+  1% {
+    margin-bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    margin-bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    margin-bottom: -10%;
+    opacity: 0;
+  }
 }
