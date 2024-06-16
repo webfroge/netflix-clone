@@ -6,6 +6,7 @@ import { CircleExclamationIcon } from "../../../Icons/CircleExplanationMark";
 import { PlayIcon } from "../../../Icons/PlayIcon";
 import { RightRotateIcon } from "../../../Icons/RightRotate";
 import classes from "./Home.module.scss";
+import { FilmPreviewModal } from "../../../components/Modals/FilmPreviewModal/FilmPreviewModal";
 
 export const HomePage = () => {
   return (
@@ -51,6 +52,8 @@ export const HomePage = () => {
         <CategoryPreview />
         <CategoryPreview />
       </div>
+
+      <FilmPreviewModal />
     </PageContainer>
   );
 };
