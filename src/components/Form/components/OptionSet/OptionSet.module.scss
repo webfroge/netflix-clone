@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+
+  .select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--main-inversion);
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: var(--third-bg);
+    border: 2px solid var(--main-grey);
+    border-radius: 4px;
+    padding: 1rem 1.8rem;
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      border-bottom: 0.8rem solid var(--main-inversion);
+      transition: 0.3s;
+      margin-left: 2rem;
+    }
+
+    .triangle_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .option_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background: var(--third-bg);
+    border: 2px solid var(--main-grey);
+    border-radius: 4px;
+    max-width: 300px;
+
+    li {
+      display: flex;
+      cursor: pointer;
+      color: var(--main-inversion);
+      font-size: 1.8rem;
+      transition: 0.3s;
+      padding: 0.5em 0.8em;
+
+      &:hover {
+        background: var(--main-grey);
+      }
+    }
+  }
+}

@@ -58,4 +58,20 @@
       }
     }
   }
+  &.keyAction {
+    cursor: pointer;
+    background: var(--second-bg);
+    border: none;
+    padding: 0.6rem;
+
+    &:hover {
+      background: var(--second-bg);
+    }
+
+    svg {
+      path {
+        fill: var(--main-inversion) !important;
+      }
+    }
+  }
 }

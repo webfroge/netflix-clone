@@ -1,9 +1,18 @@
+body {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
 .container {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(var(--main-bg-rgb), 0.5);
+  background: rgba(var(--main-bg-rgb), 0.9);
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: center;
   z-index: 1000;
+  overflow: auto;
+  padding: 5rem;
 }

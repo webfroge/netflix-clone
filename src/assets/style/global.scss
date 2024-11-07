@@ -28,9 +28,24 @@ html {
 .video_quality {
   color: var(--main-grey);
   font-size: 1.4rem;
+  text-transform: uppercase;
   border: 1px solid var(--main-grey);
   border-radius: 2px;
   padding: 0.2rem 1rem;
+}
+
+.tag {
+  color: var(--main-inversion);
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  .tag_title {
+    color: var(--main-grey);
+  }
+
+  & + .tag {
+    margin-top: 1.5rem;
+  }
 }
 
 .ml_10 {

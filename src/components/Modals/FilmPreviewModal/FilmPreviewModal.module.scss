@@ -1,0 +1,150 @@
+.container {
+  position: relative;
+  width: 90vw;
+  height: min-content;
+  max-width: 900px;
+  background: var(--main-bg);
+  border-radius: 20px;
+
+  .content {
+    padding: 0 7rem;
+  }
+
+  .close_modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  .video {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: url(/src/assets/img/Hero.svg) no-repeat center center;
+    background-size: cover;
+
+    .video_buttons_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+
+      .left_side {
+        display: flex;
+        align-items: center;
+
+        button {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .film_info {
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+
+    .right_side {
+      flex: 1;
+
+      .film_brief_characteristics {
+        color: var(--main-grey);
+        font-size: 1.8rem;
+
+        & + .film_brief_characteristics {
+          margin-top: 1rem;
+        }
+
+        .film_match {
+          color: var(--green);
+        }
+
+        span {
+          margin-right: 1rem;
+        }
+
+        .age_limiter {
+          font-size: 1.4rem;
+        }
+
+        .genres {
+          font-size: 1.4rem;
+          color: var(--main-inversion);
+        }
+      }
+
+      .film_description {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .left_side {
+      flex: 0.5;
+    }
+  }
+
+  .episode_list {
+    margin-top: 4rem;
+
+    .episode_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .episode_title {
+        color: var(--main-inversion);
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+    }
+
+    .episode_item {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid var(--main-grey);
+      padding: 3rem;
+
+      .episode_count {
+        color: var(--main-inversion);
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+
+      .episode_img {
+        width: 15rem;
+        aspect-ratio: 16 / 9;
+        background: url("../../../assets/img/Hero.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 2rem;
+      }
+
+      .episode_name {
+        color: var(--main-inversion);
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+      }
+
+      .episode_description {
+        color: var(--main-grey);
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
